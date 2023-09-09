@@ -74,7 +74,7 @@ class MovieListViewModel: ObservableObject {
     }
     
     func sortByTitle(){
-        self.movies = self.movies.sorted { $0.description.count < $1.description.count }
+        self.movies = self.movies.sorted { $0.releasedDate > $1.releasedDate }
     }
     
 }

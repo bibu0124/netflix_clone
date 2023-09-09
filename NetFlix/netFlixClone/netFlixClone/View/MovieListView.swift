@@ -12,45 +12,41 @@ struct MovieListView: View {
     @State private var sortType: SortType = .byReleaseDate
     @State private var showAlert = false
     
-    
-    
     var body: some View {
+            
         NavigationView {
+            
             List(movieListViewModel.movies) { movie in
                 NavigationLink(destination: MovieDetailView(movie: movie)) {
-                    MovieRowView(movie: movie)
+                        MovieRowView(movie: movie)
+                        .listRowSeparator(.hidden)
                 }
             }
-            .navigationBarTitle("Movie")
+            .listStyle(.plain)
+            .listRowSeparator(.hidden)
+            .navigationBarTitle("Movies")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Sort"){
                         self.showAlert.toggle()
                     }.font(.callout)
-                        .foregroundColor(.black)
+                        .foregroundColor(Color("title_darkmode"))
                 }
-            }
-        }.confirmationDialog("", isPresented: $showAlert, titleVisibility: .hidden) {
+            }.background(.white)
+        }.accentColor(Color("title_darkmode"))
+        .confirmationDialog("", isPresented: $showAlert, titleVisibility: .hidden) {
             Button("Title") {
                 self.movieListViewModel.sortByDate()
-            }
+            }.foregroundColor(.black)
+                
             Button("Release Date") {
                 self.movieListViewModel.sortByTitle()
             }
+        
         }
-//        }.alert(isPresented: $showAlert) {
-//            Alert(
-//                title: Text("Sort By"),
-//                message: Text("Select a sorting criteria"),
-//                primaryButton: .default(Text("Title")) {
-//                    self.movieListViewModel.sortByDate()
-//                },
-//                secondaryButton: .default(Text("Release Date")) {
-//                    self.movieListViewModel.sortByTitle()
-//                },
-//                dismissButton: .cancel()
-//            )
-//        }
+    
+        
+        
     }
 }
 
@@ -62,6 +58,11 @@ struct MovieRowView: View {
             Image(uiImage: movie.image)
                 .resizable()
                 .frame(width: 100, height: 150)
+                .cornerRadius(5)
+                .shadow(color: .gray,
+                        radius: 1,
+                        x: 0, // Horizontal offset
+                        y: 5)
             VStack(alignment: .leading){
                 Text(movie.title)
                     .font(.title3)

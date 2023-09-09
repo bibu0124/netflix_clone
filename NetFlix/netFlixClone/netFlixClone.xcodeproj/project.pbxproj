@@ -15,6 +15,7 @@
 		F9173A792AA72ECB00EA43C6 /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9173A782AA72ECB00EA43C6 /* MovieListViewModel.swift */; };
 		F9173A7C2AA72F1A00EA43C6 /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9173A7B2AA72F1A00EA43C6 /* MovieListView.swift */; };
 		F9173A7E2AA7301600EA43C6 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9173A7D2AA7301600EA43C6 /* MovieDetailView.swift */; };
+		F9E1C10F2AAC5D87007107AA /* DateFormatterUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C10E2AAC5D87007107AA /* DateFormatterUtility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		F9173A782AA72ECB00EA43C6 /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
 		F9173A7B2AA72F1A00EA43C6 /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
 		F9173A7D2AA7301600EA43C6 /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
+		F9E1C10E2AAC5D87007107AA /* DateFormatterUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterUtility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		F9173A662AA72E5E00EA43C6 /* netFlixClone */ = {
 			isa = PBXGroup;
 			children = (
+				F9E1C1102AAC5D8F007107AA /* Utility */,
 				F9173A7A2AA72F0500EA43C6 /* View */,
 				F9173A752AA72EA000EA43C6 /* ViewModel */,
 				F9173A672AA72E5E00EA43C6 /* netFlixCloneApp.swift */,
@@ -93,6 +96,14 @@
 				F9173A7D2AA7301600EA43C6 /* MovieDetailView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F9E1C1102AAC5D8F007107AA /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				F9E1C10E2AAC5D87007107AA /* DateFormatterUtility.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +178,7 @@
 			files = (
 				F9173A7E2AA7301600EA43C6 /* MovieDetailView.swift in Sources */,
 				F9173A6A2AA72E5E00EA43C6 /* ContentView.swift in Sources */,
+				F9E1C10F2AAC5D87007107AA /* DateFormatterUtility.swift in Sources */,
 				F9173A682AA72E5E00EA43C6 /* netFlixCloneApp.swift in Sources */,
 				F9173A7C2AA72F1A00EA43C6 /* MovieListView.swift in Sources */,
 				F9173A772AA72EAC00EA43C6 /* MovieViewModel.swift in Sources */,
@@ -302,6 +314,7 @@
 				DEVELOPMENT_TEAM = MR4CUNZHUS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = netFlixClone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -331,6 +344,7 @@
 				DEVELOPMENT_TEAM = MR4CUNZHUS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = netFlixClone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

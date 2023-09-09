@@ -23,7 +23,7 @@ class MovieViewModel: Identifiable, ObservableObject {
     init(title: String, description: String, rating: Double, duration: String, genre: String, releasedDate: String, trailerLink: String, image: UIImage) {
         self.title = title
         self.description = description
-        self.rating = "\(rating)/10"
+        self.rating = "\(rating)"
         self.duration = "Duration: \(duration)"
         self.genre = "\(genre)"
         self.releasedDate = "\(releasedDate)"
